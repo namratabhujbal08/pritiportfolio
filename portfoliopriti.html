@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+    <title>My Portfolio</title>
+
+
+    <!-- CSS -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #0f172a;
+            color: white;
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: rgba(79, 25, 90, 0.658);
+            color: rgba(37, 29, 37, 0.74);
+        }
+
+        /* ===== Skills Section ===== */
+        .skills{
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .skills h2{
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .skill-box{
+            max-width: 500px;
+            margin: 15px auto;
+            text-align: left;
+        }
+
+        .skill-box p{
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .bar{
+            width: 100%;
+            background: #334155;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress{
+            height: 12px;
+            border-radius: 20px;
+        }
+
+        .html{ width: 90%; background: #38bdf8; }
+        .css{ width: 80%; background: #22c55e; }
+        .js{ width: 60%; background: #facc15; }
+
+        /* ===== Contact Section ===== */
+        .contact{
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2{
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact form{
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .contact input,
+        .contact textarea{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+        }
+
+        .contact button{
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: black;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact button:hover{
+            background: #0ea5e9;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+    
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo{
+            font-size: 3rem;
+            color: #FF69B4;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        nav a{
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active{
+            color: #FF69B4;
+            border-bottom: 3px solid #FF69B4;
+        }
+
+         .section{
+            min-height: 100vh;
+            padding: 10rem 9%;
+        }
+
+        .home{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6rem;
+        }
+
+        .home-content h1{
+            font-size: 6rem;
+            font-weight: 700;
+        }
+
+        .home-content h3{
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .home-content p{
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        span{
+            color: #FF69B4;
+        }
+
+        .home-img img{
+            width: 32vw;
+            border-radius: 50%;
+            box-shadow: 0 0 25px #FF69B4;
+        }
+
+        .social-icons a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border: 0.2rem solid #FF69B4;
+            font-size: 2rem;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            color: #FF69B4;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover{
+            background: #FF69B4;
+            color: black;
+            box-shadow: 0 0 20px #FF69B4;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.8rem;
+            border: 2px solid #FF69B4;
+            border-radius: 4rem;
+            color: #FF69B4;
+            font-size: 1.6rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: #FF69B4;
+            color: black;
+            box-shadow: 0 0 20px #FF69B4;
+        }
+
+        /* Typing Text */
+        .typing-text{
+            font-size: 3.4rem;
+            font-weight: 600;
+        }
+
+        .typing-text span{
+            position: relative;
+        }
+
+        .typing-text span::before{
+            content: "Web Developer";
+            color: #FF69B4;
+            animation: words 20s infinite;
+        }
+
+        .typing-text span::after{
+            content: "";
+            position: absolute;
+            right: -8px;
+            width: calc(100% + 8px);
+            height: 100%;
+            background-color: black;
+            border-left: 3px solid #FF69B4;
+            animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+        }
+
+        @keyframes cursor{
+            50%{ border-color: transparent; }
+        }
+
+        @keyframes words{
+            0%,20%{ content: "Web Developer"; }
+            21%,40%{ content: "UI Designer"; }
+            41%,60%{ content: "Student Engineer"; }
+            61%,80%{ content: "Frontend Developer"; }
+            81%,100%{ content: "Creative Coder"; }
+        }
+
+        @keyframes typing{
+            10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+                width: 0;
+            }
+            5%,20%,25%,40%,45%,60%,65%,80%,85%{
+                width: calc(100% + 8px);
+            }
+        }
+
+        @media(max-width: 768px){
+            .home{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-img img{
+                width: 60vw;
+            }
+
+            nav a{
+                margin-left: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    
+</header>
+
+<section class="home">
+    <div class="home-content">
+        <h1>Hi, I'm <span>priti</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>
+            I am an engineering student passionate about web development,
+            UI design, and creating creative digital experiences.
+        </p>
+
+        <div class="social-icons">
+            <a href="#">F</a>
+            <a href="#">I</a>
+            <a href="#">L</a>
+        </div>
+
+        <a href="#" class="btn">Hire Me</a>
+    </div>
+
+    <div class="home-img">
+        <img src="popi.webp" alt="Profile Image">
+    </div>
+</section><section class="skills" id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill-box">
+            <p>HTML</p>
+            <div class="bar">
+                <div class="progress html"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <p>CSS</p>
+            <div class="bar">
+                <div class="progress css"></div>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <p>JavaScript</p>
+            <div class="bar">
+                <div class="progress js"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+</body>
+</html>
